@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="profile background size">
+<head>
+	<script src="jquery-1.6.2.min.js"></script> 
+    <script src="jquery-ui-1.8.15.custom.min.js"></script>
+    <link rel="stylesheet" href="jqueryCalendar.css"></link> 
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+	<script>
+
+	$(function(){
+		$("#datepicker").datepicker();
+	});
+	</script>
+	<meta charset="UTF-8"></meta>
+	<title>Local Guider - your private tour search engine ...</title>
+</head>
+<body>
+	<div class="mainArea">
+	<div class="topbar">
+		<!--//1170x60-->
+		<div class="wrap">
+			<a class="logo" href="homepage.html"></a>
+		<!-- 	<div class="location-search cfx">
+				<form action="main.php" method="POST">
+					<input type="submit" class="search-submit" value=""></input>
+					<div class="input-holder">
+						<input type="text" name="search_str" class="input-city-search" value="Search Locations..." ></input>
+					</div>
+
+				</form>
+
+			</div> -->
+			<!-- <div class"searchbar">
+				<div class="search-container">
+					<form id="hearder_search" class="search" action="main.php" method="GET"></form>
+					<input type="hidden" id="search_location" value="search_location"></input>
+					<input class="search-submit" type="submit" value=""></input>
+					<div class="search-container-input">
+						<input id="searching_string" class="search-input" type="text" autocomplete="off" placeholder="Search Locations..." name="search_string"></input>
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	<div class="header">
+		<div class="wrap">
+			<div class="icon-box profile">
+			</div>
+			<div class="title-box">
+				<h1>My Profile</h1>
+			</div>
+		</div>
+
+	</div>
+	<div class="steps-container">
+		<div class="step-wrap">
+			<div class="step-position">
+				<div class="step-bar">
+					<ul>
+						<li>
+							<a class="active" href="guider_show.php">
+								Basic
+								<span>The essential info</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="content_form">
+					
+
+						<!-- <form action="upload.php" name="uploadimage" method="POST" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="imagesubmit">
+</form> -->
+
+<form accept-charset="utf-8" method="POST" name="guiderdetails" action="profile.php">
+
+						<!-- <div class="profile-image" data-upload-url="images/logo.png">
+							<div class="image" id="profile-image" style="background-image:url('images/logo.png')">
+								<div class="loaderbg">
+									<div class="loader"></div>
+
+								</div>
+							</div>
+						
+						    <input type="file" name="profile_image" id="id_image" class="hidden" accept="image/png, image/jpeg" >
+					        </input>
+					        <div class="profile-image-bottom">
+					    	    <a class="add" href="#">Change Photo</a>
+					        </div>
+					    </div> -->
+					    <div class="profile-details-columns">
+					    	First Name: *<br>
+					    	<input type="text", name="first_name">
+					    	<br>
+					    	<br>
+					    	Last Name: *<br>
+					    	<input type="text", name="last_name">
+					    	<br>
+					    	<br>
+					    	Phone: *<br>
+					    	<input type="text", name="phone">
+					    	<br>
+					    	<br>
+					    	Occupation: *<br>
+					    	<input type="text", name="occupation">
+					    	<br>
+					    	<br>
+					    	Sex: *<br>
+					    	<select name="gender">
+					    		<option value ="">Select gender :</option>
+					    		<option value="F">Female</option>
+					    		<option value="M">Male</option>
+					    	</select>
+					    	<br>
+					    	<br>
+					    	Date of Birth: *<br>
+					    	<input type="text" id="datepicker" name="dob">
+					    	<br>
+					    	<br>
+
+
+					    	
+					    </div>
+					    <div class="submit">
+					    	<input class="button" type="submit" value="Save & Finish >"></input>
+					    </div>
+					
+					</form>	
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="footer">
+		<p>Welcome to LocalGuider!</p>
+		
+	</div>
+	</div>
+</body>
+</html>
