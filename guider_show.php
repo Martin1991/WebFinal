@@ -166,6 +166,10 @@ echo "
 							<input type='hidden' class='userId' name='userId' value='".$user_id."'>
 							<input class='button'   type='submit' value='Check Tours >'>
 					    </form>
+					    <form action='guider_operator.php'>
+							<input class='button'  name='addsubmit' type='submit' value='Add Tour>'>
+					    </form>
+					    
 					    </div>
 					
 					</form>	
