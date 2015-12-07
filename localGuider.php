@@ -72,7 +72,7 @@ echo "
 			</div>
 			<div class='search_Container'>
 				<div class='search_Bar col-md-2'>
-				  <form id='searchForm' action='searchResult.php' method='POST'>
+				  <form id='searchForm' action='preprocessing_searchResult.php' method='POST'>
 					  <p>Category:
 						<select name='Category' class='form-control'>
 						  <option value=''></option>

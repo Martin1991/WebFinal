@@ -60,7 +60,7 @@ echo "
 				<div class='navbar navbardefalut'>
 					<div class='navbar-header'>
 						<div class='navbar-brand navbar-left'>
-							<p>Local Guider</p>
+							<a href='localguider.php'><p>Local Guider</p></a>
 						</div>
 					</div>
 					<div class='navbar-collapse navbar-right hidden-xs'>

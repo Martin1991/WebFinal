@@ -31,8 +31,7 @@ $phone = $row1['phone'];
 $occupation = $row1['occupation'];
 $sex = $row1['sex'];
 $dob = $row1['dob'];
-$url = $row1['profile_image'];
-//echo $url;
+$url=$row1['profile_image'];
 
 
 echo "
@@ -40,14 +39,13 @@ echo "
 <html class='guider background size'>
 <head>
 	<script src='jquery-1.6.2.min.js'></script> 
-    <script src='jquery-ui-1.8.15.custom.min.js'></script>
+    <script src='jquery-ui-1.8.15.custom.min.js'></script> 
+    <script src='validate.js'></script>
     <script type='text/javascript' src='tour.js'></script>
-    
-    <link rel='stylesheet' type='text/css' href='tour.css'>
     <link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
+    <link rel='stylesheet' href='jqueryCalendar.css'></link> 
     <link rel='stylesheet' type='text/css' href='profile.css'>
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Tangerine'>
-    <link rel='stylesheet' href='jqueryCalendar.css'></link> 
 	<script>
 	$(function(){
 		$('#datepicker').datepicker();
@@ -63,6 +61,7 @@ echo "
 					<div class='navbar-header'>
 						<div class='navbar-brand navbar-left'>
 							<a href='localguider.php'><p>Local Guider</p></a>
+							
 						</div>
 					</div>
 					<div class='navbar-collapse navbar-right hidden-xs'>
@@ -100,7 +99,7 @@ echo "
 				<div class='step-bar'>
 					<ul>
 						<li>
-							<a class='active' href='localGuider.html'>
+							<a class='active' href='guider_show.php'>
 								Profile
 								<span>The essential info</span>
 							</a>
@@ -108,55 +107,71 @@ echo "
 					</ul>
 				</div>
 				<div class='content_form'>
-						<div class='profile-image' data-upload-url='".$url."'>
+				<div class='profile-image' data-upload-url='".$url."'>
 							<img class='image' id='profile-image' src='".$url."'/>
-							
 								<div class='loaderbg'>
 									<div class='loader'></div>
 
 								</div>
 							</div>
 
+<form accept-charset='utf-8' method='POST' name='personalInformation' action='admin_personalInformation.php'>
+
+						
+						
+					        
+					    
 					    <div class='personal-details-columns'>
 					    	User Name: <br>
 					    	".$user_name."
+					   
 					    	<br>
 					    	<br>
 					    	Email Address: <br>
-					    	".$email."
+					    	<input type='text' id='email' name='email'>
 					    	<br>
 					    	<br>
-					    	
+					    	Passowrd: <br>
+					    	<input type='text' id='password' name='password'>
+					    	<br>
+					    	<br>
 					    	First Name: <br>
-					    	".$first_name."
+					    	<input type='text' id='first_name' name='first_name'>
 					    	<br>
 					    	<br>
 					    	Last Name: <br>
-					    	".$last_name."
+					    	<input type='text' id='last_name' name='last_name'>
 					    	<br>
 					    	<br>
 					    	Phone: <br>
-					    	".$phone."
+					    	<input type='text' id='phone' name='phone'>
 					    	<br>
 					    	<br>
 					    	Occupation: <br>
-					    	".$occupation."
+					    	<input type='text' id='occupation' name='occupation'>
 					    	<br>
 					    	<br>
 					    	Sex: <br>
-					    	".$sex."
+					    	<select id='sex' name='sex'>
+					    		<option value =''>Select gender :</option>
+					    		<option value='F'>Female</option>
+					    		<option value='M'>Male</option>
+					    	</select>
 					    	<br>
 					    	<br>
-					    	
+					    	Date of Birth: <br>
+					    	<input type='text' id='datepicker' class='dob' name='dob'>
+
+				
+					    	<br>
+					    	<br>
 
 
 					    	
 					    </div>
 					    <div class='submit'>
-					    <form action='guiderResult.php' method='POST'>
-							<input type='hidden' name='userId' value='".$user_id."'>
-							<input class='button'   type='submit' value='Tours >'>
-					    </form>
+						<input type='hidden' id='userId' name='userId' value='$user_id'>
+					    	<input class='button' type='submit' value='Update >'></input>
 					    </div>
 					
 					</form>	
@@ -230,5 +245,5 @@ echo "
 ";
 mysqli_close($con);
 
-// include 'profile.html';
+ // include 'guider_show.html';
 ?>

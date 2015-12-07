@@ -18,11 +18,16 @@ $num = mysqli_num_rows($order_query);
 
 //echo"1";
 
-$Category=$_POST["Category"];
-$Location=$_POST["Location"];
-$Price=$_POST["Price"];
-$StartTime=$_POST["StartTime"];
-$EndTime=$_POST["EndTime"];
+//$Category=$_POST["Category"];
+//$Location=$_POST["Location"];
+//$Price=$_POST["Price"];
+//$StartTime=$_POST["StartTime"];
+//$EndTime=$_POST["EndTime"];
+$Category=$_SESSION["Category"];
+$Location=$_SESSION["Location"];
+$Price=$_SESSION["Price"];
+$StartTime=$_SESSION["StartTime"];
+$EndTime=$_SESSION["EndTime"];
 
 //$sql="SELECT tour.tour_name, tour.tour_description, tour.location, tour.cover_url, tour.tour_id, tour_details.price, register.profile_image, register.user_id, tour_details.ending_time-tour_details.starting_time as duration, register.user_name 
 //     FROM tour, tour_details, register
@@ -48,7 +53,7 @@ if(!empty($Location))
 }
 if(!empty($Price))
 {
-	 $sql.=" AND tour_details.price='$Price'";
+	 $sql.=" AND tour_details.price<='$Price'";
 }
 if(!empty($StartTime))
 {

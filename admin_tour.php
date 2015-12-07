@@ -3,19 +3,18 @@
 	include("dbcon.php");
 	$admin_query = mysqli_query($con,"SELECT order_id, customer_id, otour_id, checkout FROM tour_order ORDER BY order_id");
 
-	if(empty($_SESSION['userId']))
-	{
-		$_SESSION['userId']=-1;
-	}
-	if(empty($_SESSION['username']))
-	{
-		$_SESSION['username']="";
-	}
+	// if(empty($_SESSION['userId']))
+	// {
+	// 	$_SESSION['userId']=-1;
+	// }
+	// if(empty($_SESSION['username']))
+	// {
+	// 	$_SESSION['username']="";
+	// }
 	$userid = $_SESSION['userId'];
-	//$tour_query = mysqli_query($con, "SELECT first_name, profile_image, tour_name, cover_url, tour_description, tour_line, price, starting_time, ending_time, min_people, max_people, deadline FROM tour, tour_details, guider WHERE tour.tour_id = tour_details.ttour_id AND tour.tuser_id=guider.guider_id AND tour_id='$tour_id' ");
-	//$result = mysqli_fetch_array($tour_query);
 	$order_query = mysqli_query($con, "SELECT order_id FROM tour_order WHERE customer_id = '$userid' AND checkout = 0");
 	$num = mysqli_num_rows($order_query);
+
 	$admin_query = mysqli_query($con,"SELECT tour_id, tuser_id, tour_name, min_people, max_people, starting_time, ending_time, price, tour_line FROM tour, tour_details WHERE tour_id=ttour_id ORDER BY tour_id");
 	
 echo "<html>

@@ -3,7 +3,7 @@ session_start();
 include("dbcon.php");
 //echo"1";
 // get user_id from sign up webpage
-$user_id = $_SESSION["userId"];
+$user_id = $_POST["userId"];
 $email=$_POST["email"];
 $password=$_POST["password"];
 $first_name=$_POST["first_name"];
@@ -12,7 +12,7 @@ $phone=$_POST["phone"];
 $occupation=$_POST["occupation"];	
 $sex=$_POST["sex"];
 
-
+//echo $user_id;
 if(empty($_POST["email"])){
 	$str1 = "";
 
@@ -61,17 +61,17 @@ $str8 = "dob='".$dob."',";
 }
 $stra1 = $str1.$str2;
 $stra =substr($stra1, 0,-1);
-// echo $stra;
+ //echo $stra;
 $strb1 = $str3.$str4.$str5.$str6.$str7.$str8;
 $strb=substr($strb1, 0,-1);
-// echo $strb;
+ //echo $strb;
 
 if(empty($_POST["email"])&&empty($_POST["password"])){
 
 } else{
 	$sqlc="UPDATE register SET $stra WHERE user_id = '$user_id';";
 	mysqli_query($con, $sqlc);
-  // echo "a : ".$sqlc;
+   //echo "a : ".$sqlc;
 };
 
 if(empty($_POST["first_name"])&&empty($_POST["last_name"])&&empty($_POST["phone"])&&empty($_POST["occupation"])&&empty($_POST["dob"])&&empty($_POST["sex"])){
@@ -79,9 +79,9 @@ if(empty($_POST["first_name"])&&empty($_POST["last_name"])&&empty($_POST["phone"
 } else{
 	$sqld = "UPDATE guider SET $strb WHERE guider_id='$user_id';";
     mysqli_query($con, $sqld);
-    // echo "b : ".$sqld;
+     //echo "b : ".$sqld;
 }
 mysqli_close($con);
 
-header ('Location: guider_show.php');
+header ('Location: admin_register.php');
 ?>

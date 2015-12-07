@@ -2,10 +2,13 @@
 	session_start();
 	include("dbcon.php");
 	$tourid = $_POST['tourId'];
+
 	$_SESSION['atourid'] = $tourid;
+	
 	if (isset($_POST['editsubmit'])){
-	$tour_query = mysqli_query($con, "SELECT first_name, profile_image, tour_name, cover_url, tour_description, tour_line, price, starting_time, ending_time, min_people, max_people, deadline, location, category, status FROM tour, tour_details, guider WHERE tour.tour_id = tour_details.ttour_id AND tour.tuser_id=guider.guider_id AND tour_id='$tourid' ");
+	$tour_query = mysqli_query($con, "SELECT first_name, profile_image, tour_name, cover_url, tour_description, tour_line, price, starting_time, ending_time, min_people, max_people, deadline, location, category, status FROM tour, tour_details, guider WHERE tour.tour_id = tour_details.ttour_id AND tour.tuser_id=guider.guider_id AND tour.tour_id='$tourid' ");
 	$result = mysqli_fetch_array($tour_query);
+	
 	echo "<html>
 	<head>
 		<title>Local Guider</title>
@@ -24,7 +27,7 @@
 				<div class='navbar navbardefalut'>
 					<div class='navbar-header'>
 						<div class='navbar-brand navbar-left'>
-							<p>Let's Travel</p>
+							<a href='localguider.php'><p>Local Guider</p></a>
 						</div>
 					</div>
 					<div class='navbar-collapse navbar-right hidden-xs'>
@@ -45,7 +48,7 @@
 					<p class='host-name'>".$result['first_name']."</p>
 				</a>
 			</div>
-			<form action = 'update.php' method='post' enctype='multipart/form-data'>
+			<form action = 'update.php' method='post'>
 			<div class = 'tour-titlebar'>
 				<h2 class='title'><input type='text' name='tour_title' value='".$result['tour_name']."'></h2>
 				
@@ -232,7 +235,7 @@
 				<div class='navbar navbardefalut'>
 					<div class='navbar-header'>
 						<div class='navbar-brand navbar-left'>
-							<p>Let's Travel</p>
+							<a href='localguider.php'><p>Local Guider</p></a>
 						</div>
 					</div>
 					<div class='navbar-collapse navbar-right hidden-xs'>

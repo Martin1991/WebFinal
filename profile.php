@@ -1,10 +1,6 @@
 <?php
 session_start();
-$con=mysqli_connect("localhost","root","199058","localguider");
-if(mysqli_connect_errno())
-{
-	echo"Failed to connect to MySQL:".mysqli_connect_error();
-}
+include("dbcon.php");
 //echo"1";
 
 

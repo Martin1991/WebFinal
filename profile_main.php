@@ -23,11 +23,9 @@ echo "
 	<script src='jquery-1.6.2.min.js'></script> 
 	<script src='validate.js'></script>
     <script src='jquery-ui-1.8.15.custom.min.js'></script>
-    <script type='text/javascript' src='tour.js'></script>
     <link rel='stylesheet' type='text/css' href='tour.css'>
     <link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Tangerine'>
-
     <link rel='stylesheet' href='jqueryCalendar.css'></link> 
     <link rel='stylesheet' type='text/css' href='profile.css'>
 

@@ -164,9 +164,11 @@ echo "
 					    	
 					    </div>
 					    <div class='submit'>
-					    <form action='guider.php'>
-					    <input class='button'   type='submit' value='Update >'>
+					    <form action='guider_admin.php' method='post'>
+						
 					    
+						<input type='hidden' id='userId' name='userId' value='$user_id'> 
+					    <input class='button'   type='submit' value='Update >'>
 
 					    </form>
 					    </div>

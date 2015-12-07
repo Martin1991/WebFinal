@@ -3,7 +3,7 @@ session_start();
 include("dbcon.php");
 //echo"1";
 // get user_id from sign up webpage
-$user_id = $_SESSION["userId"];
+$user_id = $_POST["userId"];
 $email=$_POST["email"];
 $password=$_POST["password"];
 $first_name=$_POST["first_name"];
@@ -74,7 +74,7 @@ if(empty($_POST["email"])&&empty($_POST["password"])){
   // echo "a : ".$sqlc;
 };
 
-if(empty($_POST["first_name"])&&empty($_POST["last_name"])&&empty($_POST["phone"])&&empty($_POST["occupation"])&&empty($_POST["dob"])&&empty($_POST["sex"])){
+if(empty($_POST["first_name"])&&empty($_POST["last_name"])&&empty($_POST["phone"])&&empty($_POST["occupation"])){
 
 } else{
 	$sqld = "UPDATE guider SET $strb WHERE guider_id='$user_id';";
@@ -83,5 +83,5 @@ if(empty($_POST["first_name"])&&empty($_POST["last_name"])&&empty($_POST["phone"
 }
 mysqli_close($con);
 
-header ('Location: guider_show.php');
+header ('Location: administrator.php');
 ?>

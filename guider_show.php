@@ -62,13 +62,13 @@ echo "
 				<div class='navbar navbardefalut'>
 					<div class='navbar-header'>
 						<div class='navbar-brand navbar-left'>
-							<p>Local Guider</p>
+							<a href='localguider.php'><p>Local Guider</p></a>
 						</div>
 					</div>
 					<div class='navbar-collapse navbar-right hidden-xs'>
 						<ul class='nav navbar-nav navbar-list'>
-							<li><a href='#' class='cart'><img  class='shopping-cart' src='images/cart.png'><span>".$num."</span></a></li>
-							<li><a href='#' class='history'>Book History</a></li>
+							<li><a href='checkout.php' class='cart'><img  class='shopping-cart' src='images/cart.png'>".$num." Items</a></li>
+							<li><a href='userResult.php' class='history'>Book History</a></li>
 							<li><a href='profile_main.php' class='username'>Welcome ".$_SESSION['username']."!</a></li>
 							<li><a href='#' class='register'>Sign Up</a></li>
 							<li><a href='#' class='login'>Sign In</a></li>

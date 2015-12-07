@@ -55,9 +55,10 @@
 			if(move_uploaded_file($_FILES["file"]["tmp_name"],"images/" . $_FILES["file"]["name"]))
 			{
 				$url = "images/". $_FILES["file"]["name"];
+				//echo $url;
 			// If file has uploaded successfully, store its name in data base
 			 //mysqli_query($con, "UPDATE guider SET profile_image= '$url' WHERE guider_id = 1;");
-				mysqli_query($conn, "INSERT INTO tour(cover_url) VALUES ('$url') WHERE tour_id = '$maxtourid'");
+				mysqli_query($con, "UPDATE tour SET cover_url = '$url' WHERE tour_id = '".$row['maxid']."'");
 				header("Location: admin_tour.php");
 				echo "Stored in: " . "images/" . $_FILES["file"]["name"];
 

@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	$tour_id=$_SESSION['atourid'];
+	//$tuserid = $_SESSION['userId'];
 	$tour_title = $_POST['tour_title'];
 	$tour_information = $_POST['tour_information'];
 	$tour_line = $_POST['tour_line'];
@@ -9,18 +11,18 @@
 	$end_date = $_POST['EndDate'];
 	$maximum = $_POST['maximum'];
 	$minimum = $_POST['minimum'];
-	$tourid=$_SESSION['atourid'];
-	$tuserid = $_SESSION['userId'];
 	$location = $_POST['location'];
 	$category = $_POST['category'];
 	$status = $_POST['status'];
-	$tourid = $_SESSION['atourid'];
+	
+	
+	//echo $_SESSION['atourid'];
 	
 	include("dbcon.php");
 
 		
-			$tour_update = mysqli_query($con, "UPDATE tour SET tour_name = '$tour_title', tour_description = '$tour_information', location = '$location', category = 'category' WHERE  tour_id='$tourid' ");
-			$tour_detail_update = mysqli_query($con, "UPDATE tour_details SET min_people = '$minimum', max_people = '$maximum', deadline = '$deadline', starting_time = '$start_date', ending_time = '$end_date', price = '$tour_fee', tour_line = '$tour_line', status = '$status' WHERE  ttour_id = '$tourid' ");
+			$tour_update = mysqli_query($con, "UPDATE tour SET tour_name = '$tour_title', tour_description = '$tour_information', location = '$location', category = 'category' WHERE  tour_id='$tour_id' ");
+			$tour_detail_update = mysqli_query($con, "UPDATE tour_details SET min_people = '$minimum', max_people = '$maximum', deadline = '$deadline', starting_time = '$start_date', ending_time = '$end_date', price = '$tour_fee', tour_line = '$tour_line', status = '$status' WHERE  ttour_id = '$tour_id' ");
 			
 			//$result = mysqli_fetch_array($tour_update);
 
@@ -41,7 +43,7 @@
 			// check if file already exit in "images" folder.
 			if (file_exists("images/" . $_FILES["file"]["name"]))
 			{
-				header("Location: admin_tour.php");
+			header("Location: admin_tour.php");
 			echo $_FILES["file"]["name"] . " already exists. ";
 			}
 			else
@@ -52,7 +54,7 @@
 				
 			// If file has uploaded successfully, store its name in data base
 			 //mysqli_query($con, "UPDATE guider SET profile_image= '$url' WHERE guider_id = 1;");
-				mysqli_query($conn, "UPDATE tour SET cover_url = '$url' WHERE tour_id = '$tourid = '$tourid';'");
+				mysqli_query($con, "UPDATE tour SET cover_url = '$url' WHERE tour_id = '$tour_id'");
 				header("Location: admin_tour.php");
 				echo "Stored in: " . "images/" . $_FILES["file"]["name"];
 
