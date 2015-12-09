@@ -112,9 +112,9 @@ while($row=mysqli_fetch_array($result))
 						</div>
 						<div class='content_down '>
 							<div class='book_button'>
-								<form id='search_tourDetail' action='detail.php' method='POST'>
+								<form id='search_tourDetail' action='guider_update.php' method='POST'>
 									<input type='hidden' id='tourId' name='tourId' value='".$row['tour_id']."'/>
-									<input type='submit' id='book_button' value='Book tour' class='book_button btn btn-success' disabled/>
+									<input type='submit' id='book_button' name='update' value='Update' class='book_button btn btn-success'/>
 								</form>
 							</div>
 							<div class='button_right'>

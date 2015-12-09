@@ -35,7 +35,7 @@
 				<div class='navbar navbardefalut'>
 					<div class='navbar-header'>
 						<div class='navbar-brand navbar-left'>
-							<a href='localguider.php'><p>Local Guider</p></a>
+							<a href='administrator.php'><p>Local Guider</p></a>
 						</div>
 					</div>
 					<div class='navbar-collapse navbar-right hidden-xs'>
