@@ -16,7 +16,7 @@
 		//$result = mysqli_fetch_array($tour_query);
 		$order_query = mysqli_query($con, "SELECT order_id FROM tour_order WHERE customer_id = '$userid' AND checkout = 0");
 		$num = mysqli_num_rows($order_query);
-
+	echo "Hello, golden";
         echo "<html>
         <head>
                 <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Tangerine'>
