@@ -279,3 +279,286 @@ p{
 	
 }
 
+
+
+.ok, .info, .error {
+	padding: 0px 2px;
+}
+
+.ok {
+	background: #cfc;
+	border: 2px solid #9c9;
+}
+
+.info {
+	background: #ffc;
+	border: 2px solid #cc9;
+}
+
+.error {
+	background: #fcc;
+	border: 2px solid #c99;
+}
+
+
+
+
+
+header{
+	width: 100%;
+}
+/*header .navbar{
+	height: 70px;
+	opacity: 0.4;
+	position: relative;
+	width: 100%;
+	z-index: 1000;
+}
+header .navbar .navbar-right ul li {
+	font-size: 25px;
+
+    padding: 12px 15px;
+    display: inline-block
+}*/
+
+//this is for header
+header{
+	width: 100%;
+}
+header .navbar{
+	background-color: #F5F5F5;
+	position: fixed;
+	opacity: 0.6;
+	width: 100%;
+    height: 70px;
+    z-index:100000;
+}
+header .navbar .navbar-right ul li {
+	font-size: 17px;
+    padding: 5px 10px;
+    display: inline-block;
+    
+}
+.navbar-brand p{
+    font-family: 'Tangerine', sans-serif;
+	font-size:50px;
+    font-weight: bold;
+    position: absolute;
+    top: 25px;
+	color:black;
+}
+
+.navbar-right ul{
+    font-size: 0px;
+}
+.shopping-cart {
+    height: 40px;
+    width: 40px;
+}
+
+.cart{
+    height: 60px;
+    bottom: 10px;
+}
+//this is for header
+
+/*
+*    SIGN-IN BOX
+*/
+div.overlay {
+    background-color: rgba(0,0,0,1);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    div.overlay > div.login-wrapper {
+        align-self: center;
+        background-color: rgba(0,0,0,1);
+        border-radius: 2px;
+        padding: 6px;
+        width: 450px;
+        margin: auto;
+    }
+    
+        div.overlay > div.login-wrapper > div.login-content {
+            background-color: rgb(255,255,255);
+            border-radius: 2px;
+            padding: 24px;    
+            position: relative;
+        }
+        
+            div.overlay > div.login-wrapper > div.login-content > h3 {
+                color: rgb(0,0,0);
+                font-family: 'Varela Round', sans-serif;
+                font-size: 1.8em;
+                margin: 0 0 1.25em;
+                padding: 0;
+            }
+/*
+*    FORM
+*/
+form label {
+    color: rgb(0,0,0);
+    display: block;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.25em;
+    margin: .75em 0;    
+}
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form input[type="search"],
+    form input[type="password"],
+    form textarea {
+        background-color: rgb(255,255,255);
+        border: 1px solid rgb( 186, 186, 186 );
+        border-radius: 1px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 1);
+        display: block;
+        font-size: .65em;
+        margin: 6px 0 12px 0;
+        padding: .8em .55em;    
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+        transition: all 400ms ease;
+        width: 90%;
+    }
+    
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form input[type="number"]:focus,
+    form input[type="search"]:focus,
+    form input[type="password"]:focus,
+    form textarea:focus,
+    form select:focus { 
+        border-color: #4195fc;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 1), 0 0 8px #4195fc;
+    }
+    
+        form input[type="text"]:invalid:focus,
+        form input[type="email"]:invalid:focus,
+        form input[type="number"]:invalid:focus,
+        form input[type="search"]:invalid:focus,
+        form input[type="password"]:invalid:focus,
+        form textarea:invalid:focus,
+        form select:invalid:focus { 
+            border-color: rgb(248,66,66);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 1), 0 0 8px rgb(248,66,66);
+        }
+    
+form button {
+    background-color: #50c1e9;
+    border: 1px solid rgba(0,0,0,1);
+    color: rgb(255,255,255);
+    font-family: 'Varela Round', sans-serif;
+    font-size: .85em;
+    padding: .55em .9em;
+    transition: all 400ms ease;    
+}
+
+    form button:hover {
+        background-color: #1bc5b3;
+        cursor: pointer;
+    }
+
+/*
+*    SIGN-UP BOX
+*/
+div.register-overlay {
+    background-color: rgba(0,0,0,1);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    div.register-overlay > div.login-wrapper {
+        align-self: center;
+        background-color: rgba(0,0,0,1);
+        border-radius: 2px;
+        padding: 6px;
+        width: 450px;
+        margin: auto;
+    }
+    
+        div.register-overlay > div.login-wrapper > div.login-content {
+            background-color: rgb(255,255,255);
+            border-radius: 2px;
+            padding: 24px;    
+            position: relative;
+        }
+        
+            div.register-overlay > div.login-wrapper > div.login-content > h3 {
+                color: rgb(0,0,0);
+                font-family: 'Varela Round', sans-serif;
+                font-size: 1.8em;
+                margin: 0 0 1.25em;
+                padding: 0;
+            }
+
+#pswd-info {
+    position:absolute;
+    bottom:-55px;
+    bottom: -115px\9; /* IE Specific */
+    right:55px;
+    width:250px;
+    padding:15px;
+    background:#fefefe;
+    font-size:.875em;
+    border-radius:5px;
+    box-shadow:0 1px 3px #ccc;
+    border:1px solid #ddd;
+    right:-30px;
+}
+
+#pswd-info::before {
+    content: "\25B2";
+    position:absolute;
+    top:-12px;
+    left:45%;
+    font-size:14px;
+    line-height:14px;
+    color:#ddd;
+    text-shadow:none;
+    display:block;
+}
+
+ul, li {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+
+.invalid {
+    background:url(images/invalid.png) no-repeat 0 50%;
+    padding-left:22px;
+    line-height:24px;
+    color:#ec3f41;
+}
+.valid {
+    background:url(images/valid.png) no-repeat 0 50%;
+    padding-left:22px;
+    line-height:24px;
+    color:#3a7d34;
+}
+pre{
+    font-family:'Varela Round', sans-serif;
+    font-size: 18px;
+}
+.shopping-cart {
+    height: 40px;
+    width: 40px;
+}
+
+.cart{
+    bottom: 10px;
+}
+            

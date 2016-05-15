@@ -237,7 +237,6 @@ a{
 	float:left;
 	margin:auto;
 	width:70%;
-	/*height: 300px;*/
 	border:3px ;
 	padding:10px;
 	
@@ -251,17 +250,6 @@ a{
 }
 
 .submit .button{
-	font-size:20px;
-	background: #E93223 none repeat scroll 0% 0%;
-	color: #FFF;
-	height: 56px;
-	width:215px;
-	cursor: pointer;
-	text-align: center;
-	font-family: "Probapro", sans-serif;
-}
-
-a{
 	font-size:20px;
 	background: #E93223 none repeat scroll 0% 0%;
 	color: #FFF;

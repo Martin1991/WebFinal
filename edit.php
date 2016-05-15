@@ -10,12 +10,12 @@
 		<title>Local Guider</title>
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Tangerine'>
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Varela Round'>
-		<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
-		<link rel='stylesheet' type='text/css' href='tour.css'>
+		<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+		<link rel='stylesheet' type='text/css' href='css/tour.css'>
 		<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'/> 
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> 
 		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js'></script> 
-		<script type='text/javascript' src='tour.js'></script>
+		<script type='text/javascript' src='js/tour.js'></script>
 	</head>
 	<body>
 		<div class = 'main-contatiner'>

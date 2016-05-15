@@ -46,16 +46,16 @@ echo "
 	    <meta name='description' content='This is Local Guider!' />
 	    <meta name='keywords' content='Local Guider, travel' />
 		<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		<link rel='stylesheet' type='text/css' href='tour.css'>
+		<link rel='stylesheet' type='text/css' href='css/tour.css'>
 	    <link href='css/guiderResult.css' type='text/css' rel='stylesheet'/>
-		<link rel='stylesheet' type='text/css' href='bootstrap.min.css'>
+		<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
 		<link href='css/bootstrap.min.css' type='text/css' rel='stylesheet'/>
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Tangerine'>
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Varela Round'>
         <link href='images/my_icon.ico'  type='image/x-icon' rel='icon' />	
 		<script src='js/jquery-1.9.1.min.js'></script>
 		<script src='js/search_tourDetail.js'></script>
-		<script type='text/javascript' src='tour.js'></script>
+		<script type='text/javascript' src='js/tour.js'></script>
 		
 		<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'/> 
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script> 

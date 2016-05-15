@@ -90,7 +90,7 @@ echo "
         <link href='images/my_icon.ico'  type='image/x-icon' rel='icon' />	
 		<script src='js/jquery-1.9.1.min.js'></script>
 		<script src='js/search_tourDetail.js'></script>
-		<script type='text/javascript' src='tour.js'></script>
+		<script type='text/javascript' src='js/tour.js'></script>
 		
 		<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'/> 
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script> 
